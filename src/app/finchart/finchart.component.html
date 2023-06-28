@@ -1,7 +1,11 @@
-<i> Data: {{data[0].close}}</i>
+<i>{{data[1].close}}</i>
+<select
+  (change)="onSelectChange($event)">
+  <option *ngFor="let ticker of tickers" [value]="ticker">{{ticker}}</option>
+</select>
 <highcharts-chart
+  *ngIf="chartOptions"
   [Highcharts]="HighCharts"
   [options]="chartOptions">
-  style="width: 100%; height: 400px; display: block;">
+  [update]="updateFlag"
 </highcharts-chart>
-<p>finchart works!</p>

@@ -23,7 +23,8 @@ export class ProxyAPIService {
   }	
 
   public getDailyData(symbol: string) {
-    const url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo';
+    debugger;
+    const url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=OC6HXD0MP5UWIRHM';
     var res = this.http.get(url, { responseType: 'text' }).subscribe(data => {
       console.log(data);
       this.data = data;

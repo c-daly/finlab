@@ -3,18 +3,23 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Candle } from '../models/candle.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StockService {
-  private API_KEY = 'demo'; // Replace with your Alpha Vantage API key
   private BASE_URL = 'https://www.alphavantage.co/query?';
+  AV_API_KEY: string;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.AV_API_KEY = environment.AV_API_KEY;
+
+
+  }
 
   getDailyData(symbol: string): Observable<Candle[]> {
-    const url = `${this.BASE_URL}function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${this.API_KEY}`;
+    const url = `${this.BASE_URL}function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${this.AV_API_KEY}`;
 
     return this.http.get(url).pipe(
       map((response: any) => {
@@ -33,4 +38,3 @@ export class StockService {
     );
   }
 }
-
