@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProxyAPIService } from '../proxy-api.service';
 import { StockService } from '../shared/services/stock.service';
+import { TwelveData } from '../shared/models/twelvedata.model';
 import { Candle } from '../shared/models/candle.model';
 import * as Highcharts from 'highcharts';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
@@ -16,11 +16,11 @@ export class FinchartComponent implements OnInit {
   chartOptions: Highcharts.Options = {};
   data: Candle[];
   tickers: string[];
-  proxy: StockService;
+  proxy: TwelveData;
   symbol: string;
   selected: string;
 
-	constructor(proxy: StockService) {
+	constructor(proxy: TwelveData) {
     this.proxy = proxy;
     this.data = [];
     this.symbol ='MSFT';
