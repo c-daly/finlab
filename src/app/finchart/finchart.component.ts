@@ -25,7 +25,7 @@ export class FinchartComponent implements OnInit {
     this.data = [];
     this.symbol ='MSFT';
     this.selected = 'MSFT';
-    this.tickers = ['MSFT', 'QQQ', 'SPY'];
+    this.tickers = ['MSFT', 'QQQ', 'SPY','QS','WKHS', 'AAPL', 'TSLA', 'AMZN', 'GOOG', 'FB', 'NVDA', 'AMD', 'INTC', 'PYPL', 'ADBE', 'NFLX', 'CMCSA', 'PEP', 'CSCO', 'AVGO', 'TXN', 'QCOM', 'TMUS', 'COST', 'AMGN', 'SBUX', 'CHTR', 'INTU', 'ISRG', 'AMD', 'MU', 'GILD', 'MDLZ', 'BKNG', 'ADP', 'VRTX', 'FISV', 'ATVI', 'REGN', 'ILMN', 'CSX', 'ADI', 'ADSK', 'BIIB', 'MNST', 'JD', 'NXPI', 'LRCX', 'ZM', 'EBAY', 'KHC', 'EXC', 'MELI', 'WBA', 'EA', 'ROST', 'ASML', 'BIDU', 'CTSH', 'MAR', 'WDAY', 'KLAC', 'LULU', 'DXCM', 'SNPS', 'ORLY', 'DOCU', 'XEL', 'CDNS', 'PAYX', 'ANSS', 'SPLK', 'NTES', 'IDXX', 'ALGN', 'XLNX', 'PCAR', 'VRSK', 'FAST', 'SIRI', 'SWKS', 'CPRT', 'MXIM', 'SGEN', 'VRSN', 'INCY', 'DLTR', 'TCOM', 'CDW', 'CHKP', 'CERN', 'ULTA', 'FOXA', 'FOX', 'NTAP', 'CTXS', 'TTWO', 'WDC', 'EXPE', 'MCHP', 'CTAS', 'MXIM', 'SNPS', 'KLAC', 'CDNS', 'PAYX', 'ANSS', 'SPLK', 'NTES', 'IDXX', 'ALGN', 'XLNX', 'PCAR', 'VRSK', 'FAST', 'SIRI', 'SWKS', 'CPRT', 'MXIM', 'SGEN', 'VRSN', 'INCY', 'DLTR', 'TCOM', 'CDW', 'CHKP', 'CERN', 'ULTA', 'FOXA']; 
 	}
 
   ngOnInit(): void {

@@ -14,8 +14,6 @@ export class StockService {
 
   constructor(private http: HttpClient) {
     this.AV_API_KEY = environment.AV_API_KEY;
-
-
   }
 
   getDailyData(symbol: string): Observable<Candle[]> {
@@ -33,7 +31,7 @@ export class StockService {
             close: data[date]['4. close'],
             volume: data[date]['5. volume'],
           };
-        });
+        }).reverse();
       })
     );
   }
