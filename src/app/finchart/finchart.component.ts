@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StockService } from '../shared/services/stock.service';
-import { TwelveData } from '../shared/models/twelvedata.model';
+import { TwelveData } from '../shared/services/twelve-data.service';
 import { Candle } from '../shared/models/candle.model';
 import * as Highcharts from 'highcharts';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
